@@ -75,9 +75,9 @@ const sessionOptions={
   }
 }
 
-// app.get("/",(req,res)=>{
-//   res.send('Hi, welcome to home directory')
-// });
+app.get("/",(req,res)=>{
+  res.send('Hi, welcome to home directory')
+});
 
 
 app.use(session(sessionOptions));
