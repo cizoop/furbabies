@@ -1,0 +1,54 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+  <div class="row mt-4">
+    <div class="col-8 offset-2">
+    
+  <form action="/listings/<%= listing._id %>?_method=PUT" method="POST" class="needs needs-validation" novalidate enctype="multipart/form-data">
+    <h1>Edit foster paw !</h1>
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter a name</label>
+      <input name="listing[name]" value=<%=listing.name%> type="text" class="form-control" required>
+        <div class="valid-feedback">Looks good username</div>
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Enter a description</label>
+      <textarea name="listing[desc]"  type="text" class="form-control" rows="4" required><%=listing.desc%></textarea>
+       <div class="invalid-feedback">Enter little description</div>
+    </div>
+    <div class="mb-3"> 
+      Preview Img<br>
+      <img src="<%= originalImgurl %>" alt="listing_img"   style="width: 250px; height: 250px; object-fit: cover; border-radius: 5px;">
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload a new img</label>
+      <input name="listing[image]" type="file" class="form-control" required>
+         <div class="invalid-feedback">Enter valid url</div>
+    </div>
+    <div class="row">
+    <div class="mb-3 col-md-4">
+      <label for="age" class="form-label">Enter age</label>
+      <input name="listing[age]" value=<%=listing.age%> type="number" class="form-control" required>
+        <div class="invalid-feedback">Enter valid age</div>
+    </div>
+    <div class="mb-3 col-md-8">
+      <label for="gender" class="form-label">Enter gender</label>
+      <input name="listing[gender]" value=<%=listing.gender%> type="text" class="form-control" required>
+       <div class="invalid-feedback">Enter gender(M/F)</div>
+    </div>
+  </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter ur location</label>
+      <input name="listing[location]" value=<%=listing.location%> type="text" class="form-control" required>
+       <div class="invalid-feedback">Enter current location</div>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <input name="listing[category]" value=<%=listing.category%> type="text" class="form-control" required>
+       <div class="invalid-feedback">Enter valid Category(cat,dog,bird,other)</div>
+    </div>
+    <button class="btn btn-primary mb-3">Edit a paw!</button>
+  </form>
+</body>
+</div>
+</div>
+<script src="/js/script.js"></script>

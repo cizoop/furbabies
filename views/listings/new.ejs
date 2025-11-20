@@ -1,0 +1,101 @@
+<%- layout("/layouts/boilerplate") %>
+  </head>
+  <body>
+    <div class="row mt-4">
+      <div class="col-8 offset-2">
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+      <h1>Foster a paw today!</h1>
+      <div class="mb-3">
+        <label for="name" class="form-label">Enter name : </label>
+        <input
+          name="listing[name]"
+          placeholder="Enter name of paw"
+          type="text"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good username</div>
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Enter description : </label>
+        <textarea
+          name="listing[desc]"
+          placeholder="Enter description about paw"
+          type="text"
+          class="form-control"
+           required
+        ></textarea>
+        <div class="invalid-feedback">Enter little description</div>
+      </div>
+      <!-- <div class="mb-3">
+        <label for="image" class="form-label">Enter image url : </label>
+        <input
+          name="listing[image]"
+          placeholder="Enter image url"
+          type="text"
+          class="form-control"
+        />
+        <div class="invalid-feedback">Enter valid url</div>
+      </div> -->
+       <div class="mb-3">
+        <label for="image" class="form-label">upload image </label>
+        <input
+          name="listing[image]"
+          placeholder="Enter image url"
+          type="file"
+          class="form-control"
+        />
+        <div class="invalid-feedback">Enter valid url</div>
+      </div>
+      <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="age" class="form-label">Enter age : </label>
+        <input
+          name="listing[age]"
+          placeholder="Enter age"
+          type="number"
+          class="form-control"
+           required
+        />
+        <div class="invalid-feedback">Enter valid age</div>
+      </div>
+      <div class="mb-3 col-md-4">
+        <label for="gender" class="form-label">Enter gender : </label>
+        <input
+          name="listing[gender]"
+          placeholder="Enter gender"
+          type="text"
+          class="form-control"
+           required
+        />
+        <div class="invalid-feedback">Enter gender(M/F)</div>
+      </div>
+      <div class="mb-3 col-md-4">
+        <label for="category" class="form-label">Enter category : </label>
+        <input
+          name="listing[category]"
+          placeholder="Enter category"
+          type="text"
+          class="form-control"
+           required
+        />
+        <div class="invalid-feedback">Enter valid category(cat,dog,bird,other)</div>
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Enter location : </label>
+        <input
+          name="listing[location]"
+          placeholder="Enter location"
+          type="text"
+          class="form-control"
+           required
+        />
+        <div class="invalid-feedback">Enter current location</div>
+      </div>
+      <button class="btn btn-dark">Save a paw!</button>
+      <br><br>
+    </form>
+     </div>
+      </div>
+  </body>
